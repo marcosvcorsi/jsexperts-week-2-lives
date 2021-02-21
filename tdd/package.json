@@ -4,12 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "npx mocha --parallel --exit test/",
-    "test:dev": "npx mocha test/ -w",
+    "test": "npx mocha --parallel --exit test/**/*.test.js",
+    "test:dev": "npx mocha test/**/*.test.js -w",
     "test:cov": "npx nyc --reporters=html,text npm test"
   },
   "dependencies": {
     "chai": "^4.2.0",
+    "lokijs": "1.5",
     "mocha": "^8.2.1",
     "nyc": "^15.1.0",
     "sinon": "^9.2.3"
