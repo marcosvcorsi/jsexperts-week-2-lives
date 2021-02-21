@@ -1,0 +1,17 @@
+{
+  "name": "tdd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "npx mocha --parallel --exit test/",
+    "test:dev": "npx mocha test/ -w",
+    "test:cov": "npx nyc --reporters=html,text npm test"
+  },
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0",
+    "sinon": "^9.2.3"
+  }
+}
