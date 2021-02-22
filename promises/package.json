@@ -1,0 +1,17 @@
+{
+  "name": "promises",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "npx mocha --parallel --exit tests/**/*.test.js",
+    "test:dev": "npx mocha -w --exit tests/**/*.test.js",
+    "test:cov": "npx nyc --check-coverage --instrument --reporter=html --reporter=text npm test",
+    "start": "node src/index.js"
+  },
+  "devDependencies": {
+    "mocha": "8",
+    "nyc": "15",
+    "sinon": "9"
+  }
+}
