@@ -14,10 +14,10 @@ class Request {
       https.get(url, res => {
         const items = []
   
-        res.on('data', data => items.push(data));
-        res.on('end', () => resolve(JSON.parse(items.join(''))));
-        res.on('error', reject);
-      })
+        res
+          .on('data', data => items.push(data))
+          .on('end', () => resolve(JSON.parse(items.join(''))))
+      }).on('error', reject);
     })
   }
 
