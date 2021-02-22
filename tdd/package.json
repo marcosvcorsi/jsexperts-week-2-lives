@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npx mocha --parallel --exit test/**/*.test.js",
     "test:dev": "npx mocha test/**/*.test.js -w",
-    "test:cov": "npx nyc --reporters=html,text npm test"
+    "test:cov": "npx nyc --check-coverage --reporter=html --reporter=text npm test"
   },
   "dependencies": {
     "chai": "^4.2.0",
